@@ -1,0 +1,33 @@
+%Main Document
+\documentclass[a4paper, 11pt, oneside]{AuProjectHandin} % loads the layout.
+\usepackage{AuPreamble} % loads the Preample
+\include{config} % loads configuration file
+\begin{document} % begins the document
+\input{titlepage} % generates titlepage
+
+\frontmatter
+%\input{versioning}
+% Front matter is the section where table of contents, thank notes, abstract etc should be placed.
+\tableofcontents
+%\input{glossary}
+%generate  table of content etc here (filler stuff)
+\mainmatter
+%main matter is the true content of the report. include your content files here
+%using \input{filename}. No preamble etc should be in the files that are being included.
+% \begin{document} etc should not be included in the files either.
+\input{sections/project_description}
+\input{sections/impulse_response}
+\input{sections/ir_capture}
+\input{sections/ir_implementation}
+\input{sections/conclusion}
+%include content sections here
+%\input{briefUseCases}
+%input{SPI_Devkit_PSoC_doc.tex}
+\backmatter
+
+%appendix, biblography, index, list of tables, list of figures should be placed here.
+\listoffigures
+
+%\listoftables
+%\bibliography{pathtobibfile.bib}
+\end{document}

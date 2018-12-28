@@ -1,0 +1,99 @@
+%AuHandinMacros
+\usepackage{xparse}
+\usepackage{ifthen}
+%Macro for adding vejleder
+\def\@vejleder{Councilor}
+\newcommand{\SetVejleder}[1]{
+	\def\@vejleder{#1}
+}
+%Macro For insetting vejleder
+\newcommand{\ShowVejleder}[0]{\@vejleder}
+
+%Macro for setting a product name
+\def\@productname{Produktname}
+
+\newcommand{\SetProductname}[1]{
+	\def\@productname{#1}
+}
+
+%Macro for outputting the product name
+\newcommand{\ShowProductName}[0]{\@productname}
+
+%Macro for setting the Assignment (eks. Semesterprojekt 3. Semester)
+\def\@project{Projectforløbsnavn}
+\newcommand{\SetProject}[1]{
+	\def\@project{#1}
+}
+%Macro for insetting the assignment name
+\newcommand{\ShowProject}[0]{\@project}
+
+%Macros for storing and showing the name of the School department
+\def\@university{Universitetsnavn}
+\newcommand{\SetUniversity}[1]{
+	\def\@university{#1}
+}
+\newcommand{\ShowUniversity}[0]{\@university}
+
+%Macros for storing and showing group number
+\def\@groupnumber{21}
+\newcommand{\SetGroupNumber}[1]{
+	\def\@groupnumber{#1}
+}
+\newcommand{\ShowGroupNumber}[0]{\@groupnumber}
+%Command using Xparse to handle group members Names
+\ExplSyntaxOn
+\def\@groupmembernameone{none}
+\def\@groupmembernametwo{none}
+\def\@groupmembernamethree{none}
+\def\@groupmembernamefour{none}
+\def\@groupmembernamefive{none}
+\def\@groupmembernamesix{none}
+\def\@groupmembernameseven{none}
+\def\@groupmembernameeight{none}
+\NewDocumentCommand\GroupMemberNames{oooooooo}{
+	\IfNoValueF{#1} {\renewcommand\@groupmembernameone{#1}}
+	\IfNoValueF{#2} {\renewcommand\@groupmembernametwo{#2}}
+	\IfNoValueF{#3} {\renewcommand\@groupmembernamethree{#3}}
+	\IfNoValueF{#4} {\renewcommand\@groupmembernamefour{#4}}
+	\IfNoValueF{#5} {\renewcommand\@groupmembernamefive{#5}}
+	\IfNoValueF{#6} {\renewcommand\@groupmembernamesix{#6}}
+	\IfNoValueF{#7} {\renewcommand\@groupmembernameseven{#7}}
+	\IfNoValueF{#8} {\renewcommand\@groupmembernameeight{#8}}%
+}
+%command for storring student numbers, must have same order as student names
+\def\@groupmemberstudentnoone{none}
+\def\@groupmemberstudentnotwo{none}
+\def\@groupmemberstudentnothree{none}
+\def\@groupmemberstudentnofour{none}
+\def\@groupmemberstudentnofive{none}
+\def\@groupmemberstudentnosix{none}
+\def\@groupmemberstudentnoseven{none}
+\def\@groupmemberstudentnoeight{none}
+\NewDocumentCommand\GroupMemberStudentNo{oooooooo}{
+	\IfNoValueF{#1} {\renewcommand\@groupmemberstudentnoone{#1}}
+	\IfNoValueF{#2} {\renewcommand\@groupmemberstudentnotwo{#2}}
+	\IfNoValueF{#3} {\renewcommand\@groupmemberstudentnothree{#3}}
+	\IfNoValueF{#4} {\renewcommand\@groupmemberstudentnofour{#4}}
+	\IfNoValueF{#5} {\renewcommand\@groupmemberstudentnofive{#5}}
+	\IfNoValueF{#6} {\renewcommand\@groupmemberstudentnosix{#6}}
+	\IfNoValueF{#7} {\renewcommand\@groupmemberstudentnoseven{#7}}
+	\IfNoValueF{#8} {\renewcommand\@groupmemberstudentnoeight{#8}}
+}
+%prints a list of group members as a table containing names and student numbers of the added students, can handle up to 8 students.
+\NewDocumentCommand\PrintGroupMembers{}{
+	\begin{tabular}{l r}
+		Name & Student id. \\
+
+		\ifthenelse{\equal{\@groupmembernameone}{none}}{}{\@groupmembernameone & \@groupmemberstudentnoone \\}
+		\ifthenelse{\equal{\@groupmembernametwo}{none}}{}{\@groupmembernametwo & \@groupmemberstudentnotwo \\}
+		\ifthenelse{\equal{\@groupmembernamethree}{none}}{}{\@groupmembernamethree & \@groupmemberstudentnothree \\}
+		\ifthenelse{\equal{\@groupmembernamefour}{none}}{}{\@groupmembernamefour & \@groupmemberstudentnofour \\}
+		\ifthenelse{\equal{\@groupmembernamefive}{none}}{}{\@groupmembernamefive & \@groupmemberstudentnofive \\}
+		\ifthenelse{\equal{\@groupmembernamesix}{none}}{}{\@groupmembernamesix & \@groupmemberstudentnosix \\}
+		\ifthenelse{\equal{\@groupmembernameseven}{none}}{}{\@groupmembernameseven & \@groupmemberstudentnoseven \\}
+		\ifthenelse{\equal{\@groupmembernameeight}{none}}{}{\@groupmembernameeight & \@groupmemberstudentnoeight \\}
+
+	\end{tabular}
+}
+
+\ExplSyntaxOff

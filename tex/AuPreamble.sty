@@ -1,0 +1,43 @@
+%PreamplePackage
+%basicaly just including everything we need.
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{ltxtable}
+\usepackage{ragged2e}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage[version=3]{mhchem}
+\newcolumntype{T}{>{\raggedright\arraybackslash}X}
+\usepackage{projectmacros}
+\usepackage{gensymb} % \degree
+\usepackage[margin=10pt,font=small,labelfont=bf,
+labelsep=endash]{caption}
+\usepackage{listings}
+\lstdefinestyle{customc}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	frame=L,
+	xleftmargin=\parindent,
+	language=C,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+}
+\lstset{language=C, label=Code, numbers=left, style=customc}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{apalike}
+\bibliographystyle{apalike}
+%\usepackage{floatrow} does not play nice with memior class it seems.
