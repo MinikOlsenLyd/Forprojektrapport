@@ -84,25 +84,41 @@ Quality demands/NFRs should satisfy two attributes: \\
 The NFRs are drawn up using two techniques: FURPS and MoSCoW to determine system requirements and to prioritize and rank Non-Functional Requirements. \\
 
 \subsection{FURPS+}
-FURPS+ is an acronym that represents a model classify a product's properties: \textbf{F}unctionality, \textbf{U}sability, \textbf{R}eliability, \textbf{P}erformance, \textbf{S}upportability and \textbf{+} (Design and Physical constraints, Interfaces, Legal, Test, Reuse, Economic constraints, Aesthetics, Comprehensibility, Techology tradeoff, etc.)  \\
+FURPS+ is an acronym that represents a model classify a product's properties: \textbf{F}unctionality, \textbf{U}sability, \textbf{R}eliability, \textbf{P}erformance, \textbf{S}upportability and \textbf{+} (Design and Physical constraints, Interfaces, Legal, Test, Reuse, Economic constraints, Aesthetics, Comprehensibility, Techology tradeoff, etc.)  \newline
+
+A point-system from 1-5 is used to classify priorities, where 1 is the lowest and 5 the highest priority. \\
 
 \subsubsection{\textbf{F} - Functionality}
 The functionality describes the capability (size and generality of feature set), reusability (combability, interoperability, portability) and security (safety and exploitability) of a system. \\
 
+\textbf{Use-Case 1 - Create Playlist} \\
+UC1 has the highest priority as it is essential for Showman to create playlists with GUI in order to operate Showman. \newline
+\textbf{Score: 5} \\
+
 \subsubsection{\textbf{U} - Usability}
-The usability describes the human factors, aesthetics, consistency, documentation and responsivenes of the system. \\
+\textbf{Accessibility} \\
+\textit{Description of the ease of access to system} \\
+As the target group are touring artists and artist crew both with little to no time, the system need to be easy to use and operate with minimal learning curve. \newline
+\textbf{Score: 4} \newline
+
+\textbf{User Interface} \\
+\textit{Description of the Graphical User Interface's functionality} \\
+The system need a GUI that need minimal learning curve, and therefore has to be similar to GUIs of software applications such as ProTools, Apple Logic X, Ableton Live, Cymatic Audio uTool. \newline
+\textbf{Score: 3}
 
 \subsubsection{\textbf{R} - Reliability}
-The reliability describes the availability (failure frequency, robustness/durability/resilience, failure extent and time-length (recoverability/survivability), predictability (stability) and accuracy (frequency or severity of error) of the system. \\
+\textbf{Predictability} \\
+\textit{Description of the system's stability} \\
+This requirement has a high weight in order for User to be reliant on that filetransfer does not malfunction nor malfunction does not occur during operation of the system.
 
 \subsubsection{\textbf{P} - Performance}
 The performance describes the speed, efficiency, resource consumption (power, RAM, cache, etc.), throughput, capacity, scalability of the system. \\
 
-\subsubsection{\textbf{S} - Supportability
+\subsubsection{\textbf{S} - Supportability}
 The supportability describes the serviceability, mantainability, sustainability, repair speed, testability, flexibility (modifiability, configurability, adaptabilit, extenxsibility, modularity), installability and localizability of the system. \\
 
-\subsubsection{\textbf{?} - Design constraints}
-The “+” of the FURPS+ acronym allows us to specify constraints, including design, implementation, interface, and physical constraints. \\
+\subsubsection{\textbf{+} - Design constraints}
+The “\textbf{+}s” of the FURPS+ acronym allows us to specify constraints, including design, implementation, interface, and physical constraints. \\
 
 {\textbf{Design Constraints} – A design constraint, as the name implies, limits the design — for example, requiring a relational database stipulates the approach that we take in developing the system. \\
 
