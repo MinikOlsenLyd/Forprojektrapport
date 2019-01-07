@@ -52,7 +52,7 @@ The project team defines a framework with a set of \textbf{milestones} with mand
 Even though SCRUM is an integral part of project work at ASE, a detailed analysis and discussion of SCRUM is not within the scope of this document. The following is brief overview of selected elements of SCRUM. \newline
 
 \subsubsection{Milestones}
-The table in Figure ~\ref{fig:milestonespng}below outlines the typical milestones for a project at ASE, weeknumbers relative to semesterstart:
+The table in Figure ~\ref{fig:milestonespng} below outlines the typical milestones for a project at ASE, weeknumbers relative to semesterstart:
 
 \begin{figure}[H]
 \centering
@@ -61,14 +61,98 @@ The table in Figure ~\ref{fig:milestonespng}below outlines the typical milestone
 \label{fig:milestonespng}
 \end{figure}
 
-\subsection{Redmine}
+\subsubsection{Iterations}
+The ASE guide to development process for semesterproject 3 from Blackboard suggests following iterations for project completion. The first iterations primarily outlines the overview of the project. Later iterations outline hardware production and software-coding. \\
 
+\subsubsection{Iteration 1: Project Description (1 week)}
+The first project phase establishes clear overview of project idea, the most important requirements and the most significant technical risks: \newline 
+
+\textbf{Project Description:} Project description outlines the project idea along with a rich picture. Goals corresponding requirements are set. MoSCoW-analysis is included to identify and prioritize system requirements. \\
+\textbf{Requirement Specification:} Essential `Must have'-requirements is selected for informal, brief use cases and their corresponding non-functional requirements. \\
+\textbf{System Architecture:} Description of domain model based on Use Cases selected from the first iteration. A general risk assessment on system level is investigated. The assessment identifies technical risks critical for project: Unidentified interfaces, unidentified programming frameworks, unknown technology, etc. \\
+\textbf{Project Plan:} A rough estimate of project plan, milestones and iterations.
+
+\subsubsection{Iteration 2: Identification and reduction of risks (2 weeks)}
+This iteration identifies risks and investigates the possibilites to reduce them by outlining the problem domain and which technologies and methods to include in the project work.
+Problem domain, architecture, code, hardware, algorithms, etc. are investigated to assess risks. This helps the next iteration  of the requirement specification to be more precise and detailed. \\
+
+\textbf{System Architecture:} This phase begins with an analysis of necessary hardware and software to reduce risks. The phase ends with a sketch of the system's general architecture such as block diagrams (BDDs), general internal block diagrams (IBDs) and identification of internal interfaces with sequence diagrams and system sequence diagrams. Initital application model for each CPU in the system is outlined based on the initial Use Cases. Application model in this iteration include a class diagram for each CPU for each CPU with boundary-, control- and domain classes. \\
+
+\textbf{Implementation and Test:} Defining design and implementation of design with mock-ups, evaluation boards, virtual machines, emulators etc. to achieve the proof-of-concept and determine the chosen architecture's usefulness. \\
+
+\textbf{Requirement Specification:} This phase finished by updating and clarification of requiremenents. Essential use cases are updated to fully dressed use cases and non-functional requirements i.e. external interfaces is clarified. \\
+
+\textbf{Project Plan:} Is updated based on this phase.
+
+\subsubsection{Iteration 3: Early Implementation and Stabilizing Requirements (2 weeks)}
+This phase shift focus from establishing domains to design and implement a solution that meet the requirements based on use cases and non-functional requirements. The project is still in its early stage and many elements will most likely be modified during this iteration. \newline
+
+This edition of the system is the bare-bone version. This phase outlines a risk assessment, risk addressing and risk minimizing and stabilization of requirements. \\
+
+\textbf{Requirement Specification:} This phase is conluded with a revision and clarification of initial and new requirements - They are apt to be relatively stable at this point. \\
+
+\textbf{System Architecture:} This phase contains an analysis of the most necessary implementation(s). This results in an update of System Architecture with BDDs, IBDs, descriptions of internal interfaces and SW-architecture. Following this phase, the System Architecture is apt to be relatively stable. \\
+
+\textbf{HW/SW Design Specifications:} The selected requirements are implemented in a design and undergoes a Module Test. \\
+
+\textbf{Project Plan:} Is updated based on this phase. \\
+
+\subsubsection{Iteration 4-(N-1): Production of Project (2 weeks)}
+This phase focuses on production of the systen: Design, implementation and test to meet requirements. The requirements are selected and prioritized from theis business value. \newline
+
+This iteration lasts 2 weeks. First step is planning of assignments that are to be solved \textit{completely} during the sprint: Task-specific system components is designed, implemented and module testes. This iteration integrates system components. \newline
+
+A clear-cut goal for this iteration is advantageous; it is a lot more satisfying and rewarding to have minimal, but functional GUI than to implement 10 percent of the complete, comprehensive system. \\
+
+\textbf{Requirement Specification:} Is updated if necessary. They are usually minor updates at this stage of the project. \\
+
+\textbf{System Architecture:} Is updated if HW/SW architecture and interfaces are modified. Architecture modifications and additions to the system components and their integrations are documented. \\
+
+\textbf{HW/SW Design Specification:} Discoveries from previous helps modifying requirement design. Design modifications and additions to the system components and their integrations are documented. \\
+
+\textbf{Implementation and Test:} The fabricated system components is implemented and tested - Both as isolated modules and system integrated modules. \\
+
+\textbf{Project Plan:} No modifications of project plan unnecessary. The iterations are final; the \textit{content} might be flexible, but \textit{duration} is not modified. \newline
+
+\subsubsection{Iteration 5: Project Hand-in (1-2 weeks)}
+This final iteration concludes implementation and project documentation. The product and documentation is now ready for hand in. \\
+
+\textbf{Requirement Specification:} Is updated and completed. \\
+
+\textbf{System Architecture:} Is updated and completed. \\
+
+\textbf{HW/SW Design Specification:} Is updated and completed. \\
+
+\textbf{Implementation and Test:} Implementation and test concludes. Project parts that did not meet deadline is removed from project. \\
+
+\textbf{Project- and Process Report:} Is finalized. \\
+
+\textbf{SCRUM roles}
+This project is a one-man project, thus an outline of SCRUM roles are redundant as they are all taken care of by one person. \\
+
+\subsection{Redmine}
+The online platform Redmine is typically used for SCRUM and project management at ASE projects to keep track of project events. Team member(s) can monitor tasks, where progress, `burndown' for tasks is presented visually with Issues Burndown or Gantt diagrams. \newline
+
+As this project is a one-man team, the SCRUM roles are more fluid thus organized work flow and supervisor meetings are essential for the project to succeed. \\
 
 \subsection{Supervisor Meetings}
+Supervisor meetings are essential to this project as it is a one-man project. The supervisor will assist in keeping track of progress: \\
+- Preliminary project plan. \\
+- Gives feedback on detailed project plan. \\
+- Organization and conduct ongoing supervision during the project to ensure project conclusion within given time frame. \\
+- Gives continuous feedback on documentation content. \newline
 
+The supervisor is useful when conducting review- and retrospective meetings to track progress and reflections of sprints. \newline
 
 \subsection{Timetable}
+The following Figure ~\ref{fig:timetable.png} outlines the time table for the project. They are subject to be modified during the first week of the process and after initial meeting with supervisor.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{./pictures/timetable.png}
+\caption{A table of number of sprints and their duration.}
+\label{fig:timetable.png}
+\end{figure}
 
 %\textbf{Objective} \\
 %The objective of the Bachelor’s Project is that students be able to plan and conduct an engineering project in as realistic a form as the study environment allows, preferably in cooperation with companies. \\
