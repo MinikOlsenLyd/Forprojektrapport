@@ -3,7 +3,7 @@ This section is an excerpt of the project plan. The project plan features descri
 
 This section contains how the project work will be structured, which methods to be used, etc. \newline
 
-\subsection{The Bachelor's Project}
+\section{The Bachelor's Project}
 The Bachelor’s Project (Thesis or Final Project) is an extensive project dealing with a realistic engineering assignment. The bachelor project should document the students’ ability to work independently to apply engineering methods and theories in solving professional problems and development issues in a specific field. The project constitutes the conclusion of the programme and is placed in the last semester. \newline
 
 The Bachelor's Project workload is \textbf{20 ECTS points}. \textbf{1 ECTS} translates to \textbf{27 hours of workload}, totaling \textbf{540 hours} of workload for the Bachelor's Project. Assuming 18 weeks of Bachelor's Project work, total workload/week is ~30 hours/week. \newline
@@ -12,11 +12,13 @@ During the project period, 2 elective courses with 10 ECTS points in total to fu
 
 Total workload is therefore expected to be ~45-50 hours/week during the semester. To keep track of the project, weekly SCRUM meetings with supervisor is essential along with project management tools: \\
 
-- The ASE-model \\
-- SCRUM \\
-- Redmine \newline
+\begin{itemize}
+\item The ASE-model
+\item SCRUM
+\item Redmine 
+\end{itemize}
 
-\subsection{ASE-model}
+\section{ASE-model}
 
 \begin{figure}[H]
 \centering
@@ -35,23 +37,25 @@ An iterative process produces functional product parts by completing tasks \text
 
 Every iteration contains elements from several processes outlined in the ASE-model. Hence, an iteration can contain both design, implementation and test for a minor part of the project. \\
 
-\subsubsection{Iterative development with the ASE-model}
+\subsection{Iterative development with the ASE-model}
 Even though a team chooses an iterative process, the project still has various phases as shown in Figure ~\ref{fig:ASEmodel.png}. The first iterations' focus is primarily a description of idea and establishing project requirements. The following iterations focuses on system development before moving on to implementation. \\
 The difference between an iterative process and the ASE-model in Figure ~\ref{fig:ASEmodel.png} is that we operate in \textit{parallel} on several types of tasks within a given iteration. This is ongoing to better build, modify and refine the product on the basis of experiences and discoveries from earlier iterations. \newline
 
-For instance, the initial iterations outlines the first and the most important project requirements. When the reuirements are established, the problem domain is investigated: 'How can we implement GUI on a PC laptop?', 'How to measure Total Harmonic Distortion (THD) on audio output?, 'How do we establish USB-connection between GUI and Showman?', etc. \\
+For instance, the initial iterations outlines the first and the most important project requirements. When the reuirements are established, the problem domain is investigated: 'How can we implement GUI on a PC laptop?', 'How to measure Total Harmonic Distortion (THD) on audio output?', 'How do we establish USB-connection between GUI and Showman?', etc. \\
 This iteration helps clarifying the thesis statement and allows the team the opportunities to conduct physical tests. \newline
 
 In each iteration, the team works on almost every project area. Documentation is produced during the process and needs to be regularly updated. \\ 
 
-\subsection{SCRUM}
+\section{SCRUM}
 SCRUM is used to manage the iterative process. The reason is the welldocumented work procedures and team roles. Organizing the project by using SCRUM gives the project a clear overview and keeps the work flow going, even though external activities such as other courses can distract the process - In short, SCRUM makes the project manageable as the teams works toward small, but clear goals. Another reason is the widely accepted use of SCRUM in companies, giving the team necessary introduction and experience in using SCRUM. \newline
 
 The project team defines a framework with a set of \textbf{milestones} with mandatory assignments for each milestone, but gives the team the freedom to reach these milestones. \newline
 
 Even though SCRUM is an integral part of project work at ASE, a detailed analysis and discussion of SCRUM is not within the scope of this document. The following is brief overview of selected elements of SCRUM. \newline
 
-\subsubsection{Milestones}
+A team of 3 solo projects wil be jointly supervised by \textbf{Torben Gregersen}, who arranged for the 3 project teams to share a project room to encourage a better work ethic and  use each other as spunding boards for ideas.
+
+\subsection{Milestones}
 The table in Figure ~\ref{fig:milestonespng} below outlines the typical milestones for a project at ASE, weeknumbers relative to semesterstart:
 
 \begin{figure}[H]
@@ -61,10 +65,10 @@ The table in Figure ~\ref{fig:milestonespng} below outlines the typical mileston
 \label{fig:milestonespng}
 \end{figure}
 
-\subsubsection{Iterations}
+\subsection{Iterations}
 The ASE guide to development process for semesterproject 3 from Blackboard suggests following iterations for project completion. The first iterations primarily outlines the overview of the project. Later iterations outline hardware production and software-coding. \\
 
-\subsubsection{Iteration 1: Project Description (1 week)}
+\subsection{Iteration 1: Project Description (1 week)}
 The first project phase establishes clear overview of project idea, the most important requirements and the most significant technical risks: \newline 
 
 \textbf{Project Description:} Project description outlines the project idea along with a rich picture. Goals corresponding requirements are set. MoSCoW-analysis is included to identify and prioritize system requirements. \\
@@ -72,7 +76,7 @@ The first project phase establishes clear overview of project idea, the most imp
 \textbf{System Architecture:} Description of domain model based on Use Cases selected from the first iteration. A general risk assessment on system level is investigated. The assessment identifies technical risks critical for project: Unidentified interfaces, unidentified programming frameworks, unknown technology, etc. \\
 \textbf{Project Plan:} A rough estimate of project plan, milestones and iterations.
 
-\subsubsection{Iteration 2: Identification and reduction of risks (2 weeks)}
+\subsection{Iteration 2: Identification and reduction of risks (2 weeks)}
 This iteration identifies risks and investigates the possibilites to reduce them by outlining the problem domain and which technologies and methods to include in the project work.
 Problem domain, architecture, code, hardware, algorithms, etc. are investigated to assess risks. This helps the next iteration  of the requirement specification to be more precise and detailed. \\
 
@@ -84,7 +88,7 @@ Problem domain, architecture, code, hardware, algorithms, etc. are investigated 
 
 \textbf{Project Plan:} Is updated based on this phase.
 
-\subsubsection{Iteration 3: Early Implementation and Stabilizing Requirements (2 weeks)}
+\subsection{Iteration 3: Early Implementation and Stabilizing Requirements (2 weeks)}
 This phase shift focus from establishing domains to design and implement a solution that meet the requirements based on use cases and non-functional requirements. The project is still in its early stage and many elements will most likely be modified during this iteration. \newline
 
 This edition of the system is the bare-bone version. This phase outlines a risk assessment, risk addressing and risk minimizing and stabilization of requirements. \\
@@ -97,7 +101,7 @@ This edition of the system is the bare-bone version. This phase outlines a risk 
 
 \textbf{Project Plan:} Is updated based on this phase. \\
 
-\subsubsection{Iteration 4-(N-1): Production of Project (2 weeks)}
+\subsection{Iteration 4-(N-1): Production of Project (2 weeks)}
 This phase focuses on production of the systen: Design, implementation and test to meet requirements. The requirements are selected and prioritized from theis business value. \newline
 
 This iteration lasts 2 weeks. First step is planning of assignments that are to be solved \textit{completely} during the sprint: Task-specific system components is designed, implemented and module testes. This iteration integrates system components. \newline
@@ -114,7 +118,7 @@ A clear-cut goal for this iteration is advantageous; it is a lot more satisfying
 
 \textbf{Project Plan:} No modifications of project plan unnecessary. The iterations are final; the \textit{content} might be flexible, but \textit{duration} is not modified. \newline
 
-\subsubsection{Iteration 5: Project Hand-in (1-2 weeks)}
+\subsection{Iteration 5: Project Hand-in (1-2 weeks)}
 This final iteration concludes implementation and project documentation. The product and documentation is now ready for hand in. \\
 
 \textbf{Requirement Specification:} Is updated and completed. \\
@@ -130,12 +134,12 @@ This final iteration concludes implementation and project documentation. The pro
 \textbf{SCRUM roles}
 This project is a one-man project, thus an outline of SCRUM roles are redundant as they are all taken care of by one person. \\
 
-\subsection{Redmine}
+\section{Redmine}
 The online platform Redmine is typically used for SCRUM and project management at ASE projects to keep track of project events. Team member(s) can monitor tasks, where progress, `burndown' for tasks is presented visually with Issues Burndown or Gantt diagrams. \newline
 
 As this project is a one-man team, the SCRUM roles are more fluid thus organized work flow and supervisor meetings are essential for the project to succeed. \\
 
-\subsection{Supervisor Meetings}
+\section{Supervisor Meetings}
 Supervisor meetings are essential to this project as it is a one-man project. The supervisor will assist in keeping track of progress: \\
 - Preliminary project plan. \\
 - Gives feedback on detailed project plan. \\
@@ -144,7 +148,7 @@ Supervisor meetings are essential to this project as it is a one-man project. Th
 
 The supervisor is useful when conducting review- and retrospective meetings to track progress and reflections of sprints. \newline
 
-\subsection{Timetable}
+\section{Timetable}
 The following Figure ~\ref{fig:timetable.png} outlines the time table for the project. They are subject to be modified during the first week of the process and after initial meeting with supervisor.
 
 \begin{figure}[H]

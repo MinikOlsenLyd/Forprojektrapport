@@ -1,8 +1,8 @@
 \chapter{Requirement Specification}
-\subsection{Introduction}
+\section{Introduction}
 This chapter will describe the requirements needed for the multichannel audio/video playback system called Showman. This chapter contains an introductory overview of Showman in general that covers a System Description, System Overview and Usage Situation followed by Functional and Non-Functional Requirements. The chapter ends with a MoSCoW- and FURPS-analysis to organize a list of priorities needed to develop a functional prototype. \newline
 
-\subsection{System Description}
+\section{System Description}
 
 The purpose of Showman is to play back prerecorded audio- and video-material during a concert performance. Prerecorded audio- and video-playback material  is colloquially called 'backing tracks'. The primary reason of backing track usage is to enhance a concert performance by play back additional material that artists on stage do not have the option or time to play themselves. \newline
 
@@ -20,7 +20,7 @@ User starts each song in the playlist separately by pressing the `Play'-button o
 
 %\subsection{System Overview}
 
-\subsection{Usage Situation} 
+\section{Usage Situation} 
 
 Showman's intended users are artists that utilize backing tracks at concert performances to enhance/augment their performance. Preconditions are essential to Showman, as user must have up to 4 stereo or 8 mono .WAV-files and a MPEG4-videofile available for each song that has backing tracks. The artist need to have produced the backing tracks beforehand. \newline
 
@@ -30,7 +30,7 @@ When the user have the necessary files available, the user assembles the playlis
 
 When user need to start playback of a song, all user need to do is press `Play' on the user panel. An auto-stop function after the end of each song in the project is embedded in Showman. \newline
 
-\subsection{Actor-Context Diagram}
+\section{Actor-Context Diagram}
 
 The figure below is an overview of actors that interact with Showman:
 
@@ -41,20 +41,20 @@ The figure below is an overview of actors that interact with Showman:
 \label{fig:ActorContext.png}
 \end{figure}
 
-\subsubsection{User}
+\subsection{User}
 User is the primary actor. User creates the playlist and uploads the playlist to Showman. User operates Showman. User's interaction with Showman is outlined in detail in the specification for the individual Use Cases. \newline
 
-\subsubsection{GUI}
+\subsection{GUI}
 The Graphical User Interface (GUI) is the secondary actor. The GUI is the software application that handles the file management and playlist creation that is uploaded to Showman's interaction with Showman is outlined in detail in the specification for the individual Use Cases. \newline
 
-\subsection{Functional Requirements}
+\section{Functional Requirements}
 This section presents the functional requirements outlined for Showman. The figure below presents a Use-Case diagram that displays the actors' relations to the Use-Cases followed by Fully Dressed Use-Cases. \newline
 
 To keep this document brief and concise, only the first Use-Case is included. The additional Use-Cases will be explored further in the bachelor project.
 
 %\subsubsection{Use-Case Diagram}
 
-\subsubsection{Use-Case 1}
+\subsection{Use-Case 1}
 
 \begin{figure}[H]
 \centering
@@ -75,27 +75,29 @@ To keep this document brief and concise, only the first Use-Case is included. Th
 %\subsubsection{Use-Case 5}
 
 
-\subsection{Non-Functional Requirements}
+\section{Non-Functional Requirements}
 Non-Functional Requirements (NFRs) are quality-demands, which are the qualities or constraints on the services of the functions offered by the system rather than a specific behaviour. Qualities are properties or characteristics of the system that its stakeholders care about and hence will affect their degree of satisfaction with the system. \\
 Quality demands/NFRs should satisfy two attributes: \\
-- Must be verifiable - e.g. measurable metrics.
-- Should be objective. \newline
+\begin{itemize}
+\item Must be verifiable - e.g. measurable metrics.
+\item Should be objective.
+\end{itemize}
 
 The NFRs are drawn up using two techniques: FURPS and MoSCoW to determine system requirements and to prioritize and rank Non-Functional Requirements. \\
 
-\subsection{FURPS+}
+\section{FURPS+}
 FURPS+ is an acronym that represents a model classify a product's properties: \textbf{F}unctionality, \textbf{U}sability, \textbf{R}eliability, \textbf{P}erformance, \textbf{S}upportability and \textbf{+} (Design and Physical constraints, Interfaces, Legal, Test, Reuse, Economic constraints, Aesthetics, Comprehensibility, Techology tradeoff, etc.)  \newline
 
 A point-system from 1-5 is used to classify priorities, where 1 is the lowest and 5 the highest priority. \\
 
-\subsubsection{\textbf{F} - Functionality}
+\subsection{\textbf{F} - Functionality}
 The functionality describes the capability (size and generality of feature set), reusability (combability, interoperability, portability) and security (safety and exploitability) of a system. \\
 
 \textbf{Use-Case 1 - Create Playlist} \\
 UC1 has the highest priority as it is essential for Showman to create playlists with GUI in order to operate Showman. \newline
 \textbf{Score: 5} \\
 
-\subsubsection{\textbf{U} - Usability} 
+\subsection{\textbf{U} - Usability} 
 \textbf{Accessibility} \\
 \textit{Description of the ease of access to system} \\
 As the target group are touring artists and artist crew both with little to no time, the system need to be easy to use and operate with minimal learning curve. \newline
@@ -106,18 +108,18 @@ As the target group are touring artists and artist crew both with little to no t
 The system need a GUI that need minimal learning curve, and therefore has to be similar to GUIs of software applications such as ProTools, Apple Logic X, Ableton Live, Cymatic Audio uTool. \newline
 \textbf{Score: 3}
 
-\subsubsection{\textbf{R} - Reliability} 
+\subsection{\textbf{R} - Reliability} 
 \textbf{Predictability} \\
 \textit{Description of the system's stability} \\
-This requirement is ranked highly in order for User to be reliant on that filetransfer does not malfunction nor malfunction does not occur during operation of the system. \\
-\textbf{Score: 4} \newline
+This requirement is ranked medium in order for User to be reliant on that filetransfer does not malfunction nor malfunction does not occur during operation of the system. \\
+\textbf{Score: 3} \newline
 
 \textbf{Maintainability} \\
 \textit{Description of the system's maintainability} \\
-This requirement is also ranked highly in order for User to be able to acquire spare parts in case something breaks as the system will be in transit daily and is exposed to hard handling or manufacturer/producer updates firmware or software application. \newline
-\textbf{Score: 4} \newline
+This requirement is not an issue that need to be addressed at this point in the project and is therefore ranked low. \newline
+\textbf{Score: 2} \newline
 
-\subsubsection{\textbf{P} - Performance}
+\subsection{\textbf{P} - Performance}
 %The performance describes the speed, efficiency, resource consumption (power, RAM, cache, etc.), throughput, capacity, scalability of the system. \\
 \textbf{GUI start-up time} \\
 \textit{Description of the software application GUI's accessibility when opening software application} \\
@@ -136,10 +138,10 @@ This property is not ranked highly, as long as the file transfer is finished wit
 
 \textbf{Execution time - Play playlist} \\
 \textit{Description of how fast the system can complete the given functionality described in the Use Cases} \\
-This property is ranked in the middle. Showman must start playback within ~ 5-10 microseconds of User pushing `Play'-button. A research in push buttons is needed to implement and determine speed of play playlist execution time. \\
+This property is ranked in the middle. Showman must start playback within ~ 5-10 microseconds of User pushing 'Play'-button. A research in push buttons is needed to implement and determine speed of play playlist execution time. \\
 \textbf{Score: 3} \\
 
-\subsubsection{\textbf{S} - Supportability}
+\subsection{\textbf{S} - Supportability}
 %The supportability describes the serviceability, maintainability, sustainability, repair speed, testability, flexibility (modifiability, configurability, adaptabilit, extenxsibility, modularity), installability and localizability of the system. \\
 \textbf{Repairability - GUI} \\
 \textit{Description of GUI's level of repairability} \\
@@ -161,7 +163,7 @@ GUI's compability is ranked low as long as the User's laptop is compatible with 
 Showman's compability is ranked low as long as Showman is compatible with its corresponding GUI and has XLR-outputs for audio and HDMI-output for video. However, this project focuses on a \textbf{M}inimum \textbf{V}iable \textbf{P}roduct (MVP), that focuses solely on the necessary features for Showman to work. In a possible future scenario, a DANTE-protocol can be considered for implementation, opting for digital audio connection via DANTE between Showman and audio mixing desk instead of using Showman's internal D/A converters and their analog XLR-outputs. \\
 \textbf{Score: 3} \newline
 
-\subsubsection{\textbf{+} - Design constraints}
+\subsection{\textbf{+} - Design constraints}
 The “\textbf{+}s” of the \textbf{FURPS+} acronym allows us to specify constraints, including design, implementation, interface, and physical constraints. \\
 
 \textbf{Legal} \\
@@ -197,7 +199,7 @@ As Showman will be produced and marketed within the EU, Showman must be produced
 \textbf{Testing:} On-site portable XRF testing is done to determine values of the six restricted RoHS substances. \\
 
 \textbf{Certification:} After successful audit, a RoHS certficate is issued. \\
-\textbf{Score: 4} \newline
+\textbf{Score: 3} \newline
 
 \textbf{Enviromental - WEEE} \\
 \textbf{WEEE} stands for \textbf{W}aste from \textbf{E}lectrical and \textbf{E}lectronic \textbf{E}quipment. WEEE Directive 2002/96/EC mandates the treatment, recovery and recycling of electric and electronic equipment (90 percent ends up in landfills). All applicable products in the EU market must pass WEEE compliance and carry the `Wheelie Bin' sticker. \\
@@ -217,19 +219,63 @@ As Showman is exposed to electric devices or installations nearby such as GSM ha
 
 %{\textbf{Physical Constraints} – Physical constraints affect the hardware used to house the system – for example, shape, size, and weight. \\
 
-\subsection{MoSCoW}
+\section{MoSCoW}
 MoSCoW analysis is a prioritazion technique used in managemenst, business analysis, project management and software development to reach a common understanding with stakeholders on the importane they place on the delivery of each requirement. \\
 
-\textbf{M - Must have}
+\subsection{M - Must have}
 Requirements labeled as Must have are critical to the current delivery timebox in order for it to be a success. If even one Must have requirement is not included, the project delivery should be considered a failure. \\
 
-\textbf{S - Should have}
+\begin{itemize}
+\item Showman must be stable.
+\item Mean-Time-Between-Failure (MTBF) must be min. 98.5 percent.
+\item Showman's audio outputs must be XLR.
+\item Showman's video output must be HDMI.
+\item Memory storage must be internal.
+\item Showman must have a functional GUI.
+\end{itemize}
+
+\subsection{S - Should have}
 Requirements labeled as Should have are important but not necessary for delivery in the current delivery timebox. While Should have requirements can be as important as Must have, they are often not as time-critical or there may be another way to satisfy the requirement, so that it can be held back until a future delivery timebox. \\
 
-\textbf{C - Could have}
+\begin{itemize}
+\item System should be Mac- and Wndows-combatible.
+\item Showman should be able to playback playlist sequentially.
+\item Showman should be compliant with EU regulations for consumer electronics.
+\item Showman's internal memory capacity should be 500 GB.
+\item Showman's housing should be a 19'' 2U rack-mountable unit.
+\item Showman should have a display.
+\item Audio file formats must be 44.1 kHz / 16-bit .WAV.
+\end{itemize}
+
+\subsection{C - Could have}
 Requirements labeled as Could have are desirable but not necessary, and could improve user experience or customer satisfaction for little development cost. These will typically be included if time and resources permit. \\
 
-\textbf{W - Won't have/Would like}
+\begin{itemize}
+\item Showman could have a GUI app for iPad.
+\item Showman software application GUI could be user friendly.
+\item Showman software application's GUI design could be similar to most popular DAW's.
+\item Showman's could have 2 additional audio outputs for cue tracks and clicktrack.
+\item Showman could implement time code such as SMPTE to sync audio and video to other elements of concert production.
+\item Video file format could be: .MOV
+\end{itemize}
+
+\subsection{W - Won't have/Would like}
 Requirements labeled as Won't have have been agreed by stakeholders as the least-critical, lowest-payback items, or not appropriate at that time. As a result, Won't have requirements are not planned into the schedule for the next delivery timebox. Won't have requirements are either dropped or reconsidered for inclusion in a later timebox. \newline
 
-This section for requirement specifications is the \textit{first draft}, so to keep this document concise, the \textbf{MoSCoW}-analysis is omitted as it needs a revision along with the rest of the requirement specification section.
+\textbf{Won't have}
+\begin{itemize}
+\item Input for recording.
+\item Wireless connection.
+\item  Headphone outputs.
+\item Ability to edit playlist on Showman during playback.
+\end{itemize}
+
+\textbf{Would like}
+\begin{itemize}
+\item Showman retail price woud like to be: 5999,00 DKK
+\item Additional digital outputs with DANTE.protocol.
+\item Additional 2 HDMI outputs. 
+\item Additional graphical processing unit (GPU) for display.
+\end{itemize}
+
+This section for requirement specifications is the \textit{first draft}, and they will be revised during the project prediod along with the rest of the requirement specification section.
